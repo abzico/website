@@ -11,6 +11,18 @@
 	src: url('../fonts/NotoSansCJKsc-Regular.otf') format('opentype');
 }
 
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.black {
+	color: black;
+}
+.white {
+	color: white;
+}
+
 .sc-bold-text {
 	font-family: abziSCNRegularFont, "Helvetica Neue", Arial, sans-serif;
 }
@@ -29,10 +41,52 @@
 	display: -webkit-flex;
 	justify-content: center;
 	align-items: center;
-	padding: 50px;
+	padding: 30px;
 	flex-wrap: wrap;
 }
+.low-padding {
+	padding: 15px;
+}
+.default-padding {
+	padding: 30px;
+}
+.high-padding {
+	padding: 50px;
+}
 
+.slides-container {
+	flex-direction: column;
+}
+.slides-content-container {
+	flex: 5;
+	width: 100%;
+}
+.slides-navigator-container {
+	flex: 1;
+	display: block;
+	max-width: 300px;
+}
+.slides-navigator-container > * {
+	margin: 5px;
+}
+
+.header-text-separator {
+	flex: 1;
+	border: 0;
+	border-top: 2px solid white;
+	text-align: left;
+	align-self: flex-start;
+	width: 200px;
+	margin: 10px 10px 10px 0;
+}
+.header-text-separator.black {
+	border-top: 2px solid black;
+}
+.header-text-separator.white {
+	border-top: 2px solid white;
+}
+
+/* top section */
 .top-section-wrapper {
 	background-color: black;
 	text-align: center;
@@ -41,7 +95,7 @@
 .top-section {
 	flex: 1;
 	padding: 0px;
-	max-width: 800px;
+	max-width: 1024px;
 }
 
 .top-section-logo {
@@ -58,7 +112,7 @@
 	margin: 10px;
 }
 .top-section-text-eng {
-	font-size: 40px;
+	font-size: 65px;
 }
 .top-section-text-hr {
 	border: 0;
@@ -69,9 +123,10 @@
 	margin: 10px;
 }
 .top-section-text-scn {
-	font-size: 60px;
+	font-size: 65px;
 }
 
+/* operational-objective section */
 .optobj-section {
 	text-align: center;
 	background-color: white;
@@ -86,13 +141,113 @@
 .optobj-section-images {
 	flex: 1;
 	padding: 0px;
+	flex-wrap: nowrap;
 }
 .optobj-section-images > img {
 	flex: 5;
 	margin: 30px;
+	width: 150px;
 }
 .optobj-section-plus-symbol {
 	font-family: abziEngBoldFont, "Helvetica Neue", Arial, sans-serif;
 	flex: 1;
 	font-size: 60px;
+}
+
+/* game section */
+.game-section {
+	text-align: center;
+	background-color: black;
+}
+.slide-item {
+	flex-direction: column;
+}
+
+.slide-item-header-text {
+	flex: 2;
+	text-align: left;
+	align-self: flex-start;
+	font-size: 45px;
+}
+
+/* clickable circle buttons */
+.circular-button {
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	text-decoration: none;
+	background: transparent;
+	border-style: solid;
+	border-width: 2px;
+	border-color: white;
+}
+.circular-button.black-active {
+	background: black;
+	border-color: black;
+}
+.circular-button.black-inactive {
+	background: transparent;
+	border-color: black;
+}
+
+.circular-button.white-active {
+	background: white;
+	border-color: white;
+}
+.circular-button.white-inactive {
+	background: transparent;
+	border-color: white;
+}
+
+.circular-button:hover {
+	color: white;
+	background: #bbb;
+	text-decoration: none;
+	cursor: pointer;
+}
+/* end */
+
+.slide-item-image-wrapper {
+	flex: 5;
+}
+.slide-item-image {
+	margin: 30px 0 10px 0;
+	box-shadow: 4px 4px 8px 0 rgba(0,0,0,0.50);
+	max-width: 90%;
+}
+.slider-game {
+	background-image: url('../../images/bg-blur-raceplant.png');
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+/* when browser is smaller than 500px, then we adjust things to be smaller */
+@media only screen and (max-width: 500px) {
+	.top-section-logo > img {
+		height: 150px;		
+	}
+	.top-section-text-eng {
+		font-size: 55px;
+	}
+	.top-section-text-scn {
+	font-size: 55px;
+}
+
+	.optobj-section-text {
+		font-size: 35px;
+	}
+	.optobj-section-plus-symbol {
+		font-size: 35px;
+	}
+	.optobj-section-images > img{
+		width: 80px;
+	}
+
+	.slide-item-header-text {
+		font-size: 30px;
+	}
+	.header-text-separator {
+		width: 150px;
+	}
 }
