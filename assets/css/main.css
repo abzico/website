@@ -1,0 +1,98 @@
+@font-face {
+	font-family: abziEngBoldFont;
+	src: url('../fonts/HelveticaNeue Medium.ttf') format('truetype');
+}
+@font-face {
+	font-family: abziEngRegularFont;
+	src: url('../fonts/HelveticaNeue Light.ttf') format('truetype');
+}
+@font-face {
+	font-family: abziSCNRegularFont;
+	src: url('../fonts/NotoSansCJKsc-Regular.otf') format('opentype');
+}
+
+.sc-bold-text {
+	font-family: abziSCNRegularFont, "Helvetica Neue", Arial, sans-serif;
+}
+.sc-regular-text {
+	font-family: abziSCNRegularFont, "Helvetica Neue", Arial, sans-serif;
+}
+.en-bold-text {
+	font-family: abziEngBoldFont, "Helvetica Neue", Arial, sans-serif;
+}
+.en-regular-text {
+	font-family: abziEngRegularFont, "Helvetica Neue", Arial, sans-serif;
+}
+
+.flex-container {
+	display: flex;
+	display: -webkit-flex;
+	justify-content: center;
+	align-items: center;
+	padding: 50px;
+	flex-wrap: wrap;
+}
+
+.top-section-wrapper {
+	background-color: black;
+	text-align: center;
+}
+
+.top-section {
+	flex: 1;
+	padding: 0px;
+	max-width: 800px;
+}
+
+.top-section-logo {
+	flex: 1;
+	margin: 10px;
+}
+.top-section-logo > img {
+	height: 200px;
+}
+
+.top-section-text {
+	flex: 1;
+	color: white;
+	margin: 10px;
+}
+.top-section-text-eng {
+	font-size: 40px;
+}
+.top-section-text-hr {
+	border: 0;
+	border-top: 2px solid white;
+	align-self: center;
+	display: inline-block;
+	width: 200px;
+	margin: 10px;
+}
+.top-section-text-scn {
+	font-size: 60px;
+}
+
+.optobj-section {
+	text-align: center;
+	background-color: white;
+	flex-direction: column;
+}
+.optobj-section-text {
+	flex: 1;
+	color: black;
+	font-size: 50px;
+	margin: 10px;
+}
+.optobj-section-images {
+	flex: 1;
+	padding: 0px;
+}
+.optobj-section-images > img {
+	flex: 5;
+	margin: 30px;
+}
+.optobj-section-plus-symbol {
+	font-family: abziEngBoldFont, "Helvetica Neue", Arial, sans-serif;
+	flex: 1;
+	font-size: 60px;
+}
