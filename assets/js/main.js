@@ -2,6 +2,7 @@ var abzico = {
 
 	// manage variables of website
 	gameSlideIndex: 1,
+	techSlideIndex: 1,
 
 	plusGameSlides: function(n) {
 		this.gameSlideIndex = this.showDivs(this.gameSlideIndex += n, 3, this.gameSlideIndex, "ref-game-slides", "ref-game-slides-nav");
@@ -10,6 +11,11 @@ var abzico = {
 	showGameSlidesAt: function(i) {
 		this.gameSlideIndex = i;
 		this.gameSlideIndex = this.showDivs(this.gameSlideIndex, 3, this.gameSlideIndex, "ref-game-slides", "ref-game-slides-nav");
+	},
+
+	showTechSlidesAt: function(i) {
+		this.techSlideIndex = i;
+		this.techSlideIndex = this.showDivs(this.techSlideIndex, 2, this.techSlideIndex, "ref-tech-slides", "ref-tech-slides-nav");
 	},
 
 	// common functions
@@ -31,9 +37,9 @@ var abzico = {
 
 			for (var i = 0; i < buttons.length; i++) {
 				if (n == i+1)
-					buttons[i].className = `ref-game-slides-nav circular-button ${buttonType}-active`;
+					buttons[i].className = `${buttonClassName} circular-button ${buttonType}-active`;
 				else
-					buttons[i].className = `ref-game-slides-nav circular-button ${buttonType}-inactive`;
+					buttons[i].className = `${buttonClassName} circular-button ${buttonType}-inactive`;
 			}
 		}
 
@@ -44,6 +50,7 @@ var abzico = {
 
 (function() {
 	abzico.showDivs(abzico.gameSlideIndex, 3, abzico.gameSlideIndex, "ref-game-slides", "ref-game-slides-nav");
+	abzico.showDivs(abzico.techSlideIndex, 2, abzico.techSlideIndex, "ref-tech-slides", "ref-tech-slides-nav");
 }());
 
 window.abzico = abzico;
