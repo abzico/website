@@ -39,6 +39,7 @@
 .flex-container {
 	display: flex;
 	display: -webkit-flex;
+	display: -ms-flex;
 	justify-content: center;
 	align-items: center;
 	padding: 30px;
@@ -52,6 +53,18 @@
 }
 .high-padding {
 	padding: 50px;
+}
+
+.section-header {
+	flex: 1;
+	align-self: flex-start;
+	font-size: 45px;
+}
+.section-header-text {
+
+}
+.section-content {
+	flex: 5;
 }
 
 .slides-container {
@@ -336,6 +349,48 @@
 }
 .qrcode-image {
 	width: 120px;
+}
+
+/* contactus-section */
+.contactus-section {
+	flex-direction: column;
+	background-color: white;
+}
+.contactus-header-section {
+}
+.contactus-content-section {
+	width: 100%;
+}
+.contactus-left-section {
+	flex: 2;
+	font-size: 30px;
+}
+.contactus-left-section-text-wrapper {
+	text-align: left;
+	color: #333333;
+}
+.contactus-left-section-text-wrapper > .bold {
+	font-weight: bold;
+	font-size: 32px;
+	color: black;
+}
+.contactus-right-section {
+	flex: 1;
+}
+.contactus-right-section > img {
+	width: 200px;
+}
+
+@media only screen and (max-width: 680px) {
+	.contactus-left-section {
+		font-size: 22px;
+	}
+	.contactus-left-section-text-wrapper {
+		font-size: 24px;
+	}
+	.contactus-content-section {
+		flex-direction: column;
+	}
 }
 
 /* when browser is smaller than 500px, then we adjust things to be smaller */
