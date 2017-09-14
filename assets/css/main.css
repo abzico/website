@@ -251,6 +251,93 @@
 	font-size: 45px;
 }
 
+/* team-section */
+.team-section {
+	background-color: black;
+	max-width: none;
+	background-image: url('../../images/crissXcross.png');
+	background-repeat: repeat;
+	text-align: center;
+	flex-direction: column;
+}
+.team-section-avatars-wrapper {
+	flex: 5;
+	width: 100%;
+	max-width: 1500px;
+}
+.team-section-tagline {
+	flex: 2;
+}
+.team-section-avatar-wrapper {
+	flex: 1;
+	flex-direction: column;
+}
+.team-section-avatar-and-name-wrapper {
+	flex: 5;
+	flex-direction: column;
+}
+.team-section-avatar-image-wrapper {
+	flex: 4;
+}
+.team-section-avatar-name {
+	flex: 1;
+	margin: 20px;
+	font-size: 30px;
+}
+.team-section-avatar-image {
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	background: white;
+	border: 5px solid white;
+}
+.team-section-avatar-tagline {
+	flex: 2;
+	font-size: 18px;
+	color: #898989;
+}
+.team-section-avatar-tagline > a {
+	color: #8CABFF;
+	cursor: pointer;
+	border-bottom: 2px dotted #9FABFF;
+}
+
+/* tooltip, see https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_top */
+.tooltip {
+	position: relative;
+	display: inline-block;
+}
+.tooltip .tooltip-content {
+  display: none;
+  width: 120px;
+  background-color: white;
+  color: black;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -60px;
+}
+.tooltip .tooltip-content::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: white transparent transparent transparent;
+}
+.tooltip:hover .tooltip-content {
+  display: inline-block;
+}
+.qrcode-image {
+	width: 120px;
+}
+
 /* when browser is smaller than 500px, then we adjust things to be smaller */
 @media only screen and (max-width: 500px) {
 	.top-section-logo > img {
@@ -285,5 +372,10 @@
 	}
 	.slide-item-text > .en-bold-text {
 		font-size: 35px;
+	}
+
+	.team-section-avatar-image {
+		width: 150px;
+		height: 150px;
 	}
 }

@@ -46,6 +46,23 @@ var abzico = {
 		// this is item's number not index
 		return currentSlideIndex;
 	},
+
+	toggleTooltip: function(elementId) {
+		// get its immediate child
+  	var element = document.getElementById(elementId);
+  	if (element != null) {
+  		var display = element.style.display;
+
+  		// if it's hidden then show
+    	if (display.search("none") != -1) {
+    		element.style.display = "inline-block";
+    	}
+    	// otherwise hide it
+    	else {
+    		element.style.display = "none";
+    	}
+  	}
+	}
 };
 
 (function() {
