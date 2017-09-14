@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
-	<body>
+	<body onload="abzico.initMap('map-element')">
 		<!-- top-section -->
 		<div class="flex-container high-padding top-section-wrapper">
 			<div class="flex-container top-section">
@@ -152,7 +152,7 @@
 			<div class="section-content black flex-container contactus-content-section">
 				<div class="contactus-left-section sc-regular-text text-black-shadow flex-container">
 					<div class="contactus-left-section-text-wrapper">
-						<span class="bold">深圳市气包子科技合伙企业（有限合伙）</span><br/>
+						<span class="bold">深圳市气包子科技合伙企业（有限合伙）</span><br/><br/>
 						<span class="bold">地址</span>: 宝安富通好旺角C3栋1单元7层702<br/>
 						<span class="bold">电话</span>：+86 156 8082 3260
 					</div>
@@ -163,7 +163,15 @@
 			</div>
 		</div>
 
+		<!-- map-section -->
+		<div class="map-section">
+			<div id="map-element">
+			</div>
+		</div>
+
 		<!-- load js after page load -->
+		<script charset="utf-8" src="assets/js/tencent-preload-map.js"></script>
+		<script src="assets/js/tencent-map.js"></script>
 		<script src="assets/js/main.js"></script>
 	</body>
 </html>

@@ -62,7 +62,24 @@ var abzico = {
     		element.style.display = "none";
     	}
   	}
-	}
+	},
+
+	initMap: function(mapElementId) {
+		    var center=new qq.maps.LatLng(22.5588425,113.8809458);
+		    var map=new qq.maps.Map(document.getElementById(mapElementId),{
+		        center:center,
+		        zoom:16
+		    });
+		    //添加定时器
+		    setTimeout(function(){
+		        var marker=new qq.maps.Marker({
+		            position:center,
+					animation:qq.maps.MarkerAnimation.DROP,
+		            map:map
+		        });
+		        //marker.setAnimation(qq.maps.Animation.DROP);
+		    },2000);
+			}
 };
 
 (function() {

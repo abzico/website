@@ -360,6 +360,7 @@
 }
 .contactus-content-section {
 	width: 100%;
+	max-width: 1400px;
 }
 .contactus-left-section {
 	flex: 2;
@@ -378,7 +379,23 @@
 	flex: 1;
 }
 .contactus-right-section > img {
-	width: 200px;
+	width: 250px;
+}
+
+/* map-section */
+.map-section {
+	background-color: black;
+	height: 600px;
+	background-color: black;
+	max-width: none;
+	background-image: url('../../images/crissXcross.png');
+	background-repeat: repeat;
+	text-align: center;
+}
+#map-element {
+	margin: auto;
+	width: 90%;
+	height: 100%;
 }
 
 @media only screen and (max-width: 680px) {
@@ -390,6 +407,9 @@
 	}
 	.contactus-content-section {
 		flex-direction: column;
+	}
+	.map-section {
+		height: 450px;
 	}
 }
 
