@@ -313,6 +313,7 @@
 	color: #8CABFF;
 	cursor: pointer;
 	border-bottom: 2px dotted #9FABFF;
+	padding-bottom: 2px;
 }
 
 /* tooltip, see https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_top */
@@ -354,13 +355,14 @@
 /* contactus-section */
 .contactus-section {
 	flex-direction: column;
-	background-color: white;
 }
 .contactus-header-section {
+	flex: 1;
 }
 .contactus-content-section {
 	width: 100%;
 	max-width: 1400px;
+	flex: 4;
 }
 .contactus-left-section {
 	flex: 2;
@@ -396,6 +398,43 @@
 	margin: auto;
 	width: 90%;
 	height: 100%;
+}
+
+/* followus-section */
+.followus-section {
+	flex-direction: column;
+}
+.followus-header-section {
+	flex: 1;
+}
+.followus-content-section {
+	flex: 4;
+	width: 100%;
+	max-width: 1024px;
+	text-align: center;
+}
+.followus-content-section-social-wrapper {
+	flex: 1;
+	flex-direction: column;
+}
+.followus-content-section-social-wrapper > .image-wrapper {
+	flex: 2;
+}
+.image-wrapper > img {
+	width: 64px;
+	flex-direction: column;
+}
+.followus-content-section-social-wrapper > .link-wrapper {
+	flex: 1;
+}
+.link-wrapper > a {
+	border-bottom: 2px dotted #CCCCCC;
+	padding-bottom: 5px;
+	text-decoration: none;
+}
+.link-wrapper > .tagline {
+	font-size: 20px;
+	color: #888888; 
 }
 
 @media only screen and (max-width: 680px) {
