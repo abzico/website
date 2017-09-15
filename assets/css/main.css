@@ -8,7 +8,7 @@
 }
 @font-face {
 	font-family: abziSCNRegularFont;
-	src: url('../fonts/NotoSansCJKsc-Regular.otf') format('opentype');
+	src: url('../fonts/DroidSansFallback.ttf') format('truetype');
 }
 
 * {
@@ -24,10 +24,10 @@
 }
 
 .sc-bold-text {
-	font-family: abziSCNRegularFont, "Helvetica Neue", Arial, sans-serif;
+	font-family: abziEngBoldFont, "Helvetica Neue", abziSCNRegularFont, Arial, sans-serif;
 }
 .sc-regular-text {
-	font-family: abziSCNRegularFont, "Helvetica Neue", Arial, sans-serif;
+	font-family: abziEngRegularFont, "Helvetica Neue", abziSCNRegularFont, Arial, sans-serif;
 }
 .en-bold-text {
 	font-family: abziEngBoldFont, "Helvetica Neue", Arial, sans-serif;
@@ -379,9 +379,16 @@
 }
 .contactus-right-section {
 	flex: 1;
+	flex-direction: column;
 }
 .contactus-right-section > img {
+	flex: 4;
 	width: 250px;
+}
+.contactus-right-section > .image-tagline {
+	flex: 1;
+	font-size: 12px;
+	color: #888888;
 }
 
 /* map-section */
@@ -412,6 +419,7 @@
 	width: 100%;
 	max-width: 1024px;
 	text-align: center;
+	padding: 5px;
 }
 .followus-content-section-social-wrapper {
 	flex: 1;
@@ -444,8 +452,9 @@
 	padding: 30px;
 	text-align: center;
 }
-.footnote-section > span:nth-of-type(2) {
+.footnote-section > div:nth-of-type(2) {
 	color: #999999;
+	margin-top: 5px;
 }
 .footnote-section > a {
 	border-bottom: 2px dotted #555555;
@@ -465,7 +474,7 @@
 		flex-direction: column;
 	}
 	.map-section {
-		height: 450px;
+		height: 400px;
 	}
 }
 
