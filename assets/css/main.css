@@ -437,6 +437,23 @@
 	color: #888888; 
 }
 
+/* footnote-section */
+.footnote-section {
+	background-color: black;
+	color: white;
+	padding: 30px;
+	text-align: center;
+}
+.footnote-section > span:nth-of-type(2) {
+	color: #999999;
+}
+.footnote-section > a {
+	border-bottom: 2px dotted #555555;
+	padding-bottom: 3px;
+	text-decoration: none;
+	color: #999999;
+}
+
 @media only screen and (max-width: 680px) {
 	.contactus-left-section {
 		font-size: 22px;
