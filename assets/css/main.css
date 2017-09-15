@@ -1,10 +1,10 @@
 @font-face {
 	font-family: abziEngBoldFont;
-	src: url('../fonts/HelveticaNeue Medium.ttf') format('truetype');
+	src: url('../fonts/DroidSans-Bold.ttf') format('truetype');
 }
 @font-face {
 	font-family: abziEngRegularFont;
-	src: url('../fonts/HelveticaNeue Light.ttf') format('truetype');
+	src: url('../fonts/DroidSans-Regular.ttf') format('truetype');
 }
 @font-face {
 	font-family: abziSCNRegularFont;
