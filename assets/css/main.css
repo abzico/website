@@ -42,6 +42,8 @@
 	display: -ms-flex;
 	justify-content: center;
 	align-items: center;
+	-webkit-align-items: center;
+	-ms-align-items: center;
 	padding: 30px;
 	flex-wrap: wrap;
 	-webkit-flex-wrap: wrap;
@@ -231,8 +233,8 @@
 	-ms-flex: 2;
 	text-align: left;
 	align-self: flex-start;
-	align-self: -webkit-flex-start;
-	align-self: -ms-flex-start;
+	-webkit-align-self: flex-start;
+	-ms-align-self: flex-start;
 	font-size: 45px;
 }
 .text-white-shadow {
