@@ -24,10 +24,10 @@
 }
 
 .sc-bold-text {
-	font-family: abziEngBoldFont, "Helvetica Neue", abziSCNRegularFont, Arial, sans-serif;
+	font-family: abziSCNRegularFont, abziEngBoldFont, "Helvetica Neue", Arial, sans-serif;
 }
 .sc-regular-text {
-	font-family: abziEngRegularFont, "Helvetica Neue", abziSCNRegularFont, Arial, sans-serif;
+	font-family: abziSCNRegularFont, abziEngRegularFont, "Helvetica Neue", Arial, sans-serif;
 }
 .en-bold-text {
 	font-family: abziEngBoldFont, "Helvetica Neue", Arial, sans-serif;
@@ -293,10 +293,15 @@
 	-webkit-flex: 5;
 	-ms-flex: 5;
 }
+.slide-item-image-wrapper > a {
+	flex: 1;
+	-webkit-flex: 1;
+	-ms-flex: 1;
+}
 .slide-item-image {
 	margin: 30px 0 10px 0;
 	box-shadow: 4px 4px 8px 0 rgba(0,0,0,0.50);
-	max-width: 90%;
+	max-height: 350px;
 }
 .slide-item-text {
 	flex: 1;
@@ -310,7 +315,7 @@
 	-ms-flex: 1;
 	font-size: 25px;
 }
-.slide-item-text > .en-bold-text {
+.slide-item-text .en-bold-text {
 	font-size: 45px;
 }
 
@@ -611,10 +616,10 @@
 	}
 
 	.slide-item-text {
-		font-size: 30px;
+		font-size: 25px;
 	}
-	.slide-item-text > .en-bold-text {
-		font-size: 35px;
+	.slide-item-text .en-bold-text {
+		font-size: 30px;
 	}
 
 	.team-section-avatar-image {
