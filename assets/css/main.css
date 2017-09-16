@@ -234,14 +234,16 @@
 /* end */
 
 .slider-game {
-	background-image: url('../../images/bg-blur-raceplant.png');
+	background-image: url('../../images/bg-blur-raceplant.jpg');
 	background-repeat: no-repeat;
 	background-position: center;
+	background-size: cover;
 }
 .slider-tech {
-	background-image: url('../../images/blur-bg-heatap.png');
+	background-image: url('../../images/blur-bg-heatap.jpg');
 	background-repeat: no-repeat;
 	background-position: center;
+	background-size: cover;
 }
 
 .slide-item-image-wrapper {
@@ -268,7 +270,7 @@
 .team-section {
 	background-color: black;
 	max-width: none;
-	background-image: url('../../images/crissXcross.png');
+	background-image: url('../../images/crissXcross.jpg');
 	background-repeat: repeat;
 	text-align: center;
 	flex-direction: column;
@@ -397,7 +399,7 @@
 	height: 600px;
 	background-color: black;
 	max-width: none;
-	background-image: url('../../images/crissXcross.png');
+	background-image: url('../../images/crissXcross.jpg');
 	background-repeat: repeat;
 	text-align: center;
 }
