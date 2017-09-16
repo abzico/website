@@ -80,6 +80,7 @@
 	flex-direction: column;
 	-webkit-flex-direction: column;
 	-ms-flex-direction: column;
+	overflow: hidden;
 }
 .slides-content-container {
 	flex: 5;
@@ -296,7 +297,6 @@
 	flex: 5;
 	-webkit-flex: 5;
 	-ms-flex: 5;
-	overflow: hidden;
 }
 .slide-item-image-wrapper > a {
 	flex: 1;
