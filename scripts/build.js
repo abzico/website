@@ -15,6 +15,7 @@ fsextra.emptyDirSync('build');
 fsextra.copySync('assets', 'build/assets');
 fsextra.copySync('images', 'build/images');
 fsextra.copySync('index.html', 'build/index.html');
+fsextra.copySync('favicon.ico', 'build/favicon.ico');
 
 // uglify and minify main.js
 var result = uglifyjs.minify({
