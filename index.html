@@ -7,69 +7,79 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
 	<body onload="abzico.initMap('map-element')">
-		<!-- top-section -->
-		<div class="flex-container high-padding top-section-wrapper">
-			<div class="flex-container top-section">
-				<div class="top-section-logo">
-					<img src="images/company-logo.png"/>
+		<!-- top-section (non-flex version) -->
+		<div class="top-section align-center">
+			<div class="top-section-elements">
+				<div class="top-section-image">
+					<img src="images/company-logo.png" />
 				</div>
-				<div class="top-section-text">
-					<div class="top-section-text-scn sc-bold-text">
-						气包子
-					</div>
-					<div class="top-section-text-hr">
-					</div>
-					<div class="top-section-text-eng en-bold-text">
-						Angry Baozi
-					</div>
+				<div class="top-section-text align-center align-middle">
+					<div>气包子</div>
+					<div class="top-section-hr"></div>
+					<div>Angry Baozi</div>
 				</div>
 			</div>
 		</div>
 
 		<!-- operation-objective-section -->
-		<div class="flex-container optobj-section">
-			<div class="optobj-section-text sc-bold-text">
+		<div class="optobj-section">
+			<div class="optobj-section-text">
 				制作有影响力的互联网<br/>
 				服务和游戏
 			</div>
-			<div class="flex-container optobj-section-images">
-				<img src="images/saas-icon.svg" />
-				<div class="optobj-section-plus-symbol">+</div>
-				<img src="images/gamepad-icon.svg" />
+			<div class="optobj-section-bottom-part">
+				<div>
+					<img src="images/saas-icon.png" />
+				</div>
+				<div>+</div>
+				<div>
+					<img src="images/gamepad-icon.png" />
+				</div>
 			</div>
 		</div>
-
-		<!-- game-section -->
-		<div class="flex-container slides-container game-section slider-game">
-			<div class="slides-content-container">
-				<div class="ref-game-slides flex-container slide-item white low-padding">
-					<div class="slide-item-header-text text-black-shadow sc-bold-text">
-						我们制作独立游戏
+		
+		<!-- game-section (non-flex version) -->
+		<div class="game-section slides-container">
+			<div class="slide-content-container">
+				<div class="slide-item ref-game-slides">
+					<div class="slide-header-section">
+						<div>我们制作独立游戏</div>
+						<div class="header-text-separator"></div>
 					</div>
-					<div class="header-text-separator white"></div>
-					<div class="slide-item-image-wrapper flex-container">
-						<a href="images/raceplant-screenshot.png"><img src="images/raceplant-screenshot.png" class="slide-item-image" /></a>
-					</div>
-				</div>
-				<div class="ref-game-slides flex-container slide-item white low-padding">
-					<div class="slide-item-text text-black-shadow sc-regular-text flex-container">
-						<div class="slide-item-text-wrapper flex-container">
-							<div><span class="en-bold-text">Raceplant</span> 是我们开发的一款游戏</div>
-							<div>是在<span class="en-bold-text">48</span>小时 <span class="en-bold-text">CIGA Game Jam 2017</span> 中制作的。</div>
-							<div>制作内部游戏是我们的操作之一。</div>
+					<div class="slide-content-section">
+						<div class="slide-image-container">
+							<div>
+								<img src="images/raceplant-screenshot.png" class="slide-image" onclick="window.location.href='images/raceplant-screenshot.png'"/>
+							</div>
 						</div>
 					</div>
 				</div>
-				<div class="ref-game-slides flex-container slide-item white low-padding">
-					<div class="slide-item-image-wrapper flex-container">
-						<a href="images/public-play.jpg"><img src="images/public-play.jpg" class="slide-item-image" /></a>
+				<div class="slide-item ref-game-slides">
+					<div class="slide-content-section">
+						<div class="text-full-content">
+							<p><span class="bold">Raceplant</span> 是我们开发的一款游戏<br/>
+							是在48小时 <span class="bold">CIGA Game Jam 2017</span> 中制作的。<br/>
+							制作内部游戏是我们的操作之一。</p>
+						</div>
 					</div>
-					<div class="slide-item-subtext text-black-shadow sc-regular-text">
-						公众娱乐日
+				</div>
+				<div class="slide-item ref-game-slides">
+					<div class="slide-header-dummy-section"></div>
+					<div class="slide-content-section">
+						<div class="slide-image-container">
+							<div>
+								<img src="images/public-play.jpg" class="slide-image" onclick="window.location.href='images/public-play.jpg'"/>
+							</div>
+						</div>
+						<div class="clear-image-float"></div>
+						<div>
+							<p>公众娱乐日</p>
+						</div>
 					</div>
 				</div>
 			</div>
-			<div class="slides-navigator-container">
+			<div class="clear-image-float"></div>
+			<div class="slide-navigator-container">
 				<a onclick="window.abzico.showGameSlidesAt(1)" class="ref-game-slides-nav circular-button white-active"></a>
 				<a onclick="window.abzico.showGameSlidesAt(2)" class="ref-game-slides-nav circular-button 
 				white-inactive"></a>
@@ -77,29 +87,34 @@
 			</div>
 		</div>
 
-		<!-- tech-section -->
-		<div class="flex-container slides-container tech-section slider-tech">
-			<div class="slides-content-container">
-				<div class="ref-tech-slides flex-container slide-item black low-padding">
-					<div class="slide-item-header-text text-black-shadow sc-bold-text">
-						我们做小程序和互联网服务
+		<!-- tech-section (non-flex) -->
+		<div class="tech-section slides-container">
+			<div class="slide-content-container">
+				<div class="slide-item ref-tech-slides">
+					<div class="slide-header-section">
+						<div>我们做小程序和互联网服务</div>
+						<div class="header-text-separator"></div>
 					</div>
-					<div class="header-text-separator black"></div>
-					<div class="slide-item-image-wrapper flex-container">
-						<a href="images/heatap-screenshot.png"><img src="images/heatap-screenshot.png" class="slide-item-image" /></a>
+					<div class="slide-content-section">
+						<div class="slide-image-container">
+							<div>
+								<img src="images/heatap-screenshot.png" class="slide-image" onclick="window.location.href='images/heatap-screenshot.png'"/>
+							</div>
+						</div>
 					</div>
 				</div>
-				<div class="ref-tech-slides flex-container slide-item black low-padding">
-					<div class="slide-item-text text-black-shadow sc-regular-text flex-container">
-						<div class="slide-item-text-wrapper flex-container">
-							<div><span class="en-bold-text">HeaTap</span> 是针对有趣的地区和地点</div>
-							<div>正在开发的人群来源地理位置</div>
-							<div>&nbsp;更精彩的应用程序...</div>
+				<div class="slide-item ref-tech-slides">
+					<div class="slide-content-section">
+						<div class="text-full-content">
+							<p><span class="bold">HeaTap</span> 是针对有趣的地区和地点<br/>
+							正在开发的人群来源地理位置<br/><br/>
+							更精彩的应用程序...</p>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="slides-navigator-container">
+			<div class="clear-image-float"></div>
+			<div class="slide-navigator-container">
 				<a onclick="window.abzico.showTechSlidesAt(1)" class="ref-tech-slides-nav circular-button black-active"></a>
 				<a onclick="window.abzico.showTechSlidesAt(2)" class="ref-tech-slides-nav circular-button 
 				black-inactive"></a>
@@ -107,66 +122,76 @@
 		</div>
 
 		<!-- team-section -->
-		<div class="flex-container team-section">
-			<div class="flex-container team-section-avatars-wrapper">
-				<div class="flex-container team-section-avatar-wrapper">
-					<div class="flex-container team-section-avatar-and-name-wrapper">
-						<div class="team-section-avatar-image-wrapper">
-							<img src="images/wasin-8bit-avatar.png" class="team-section-avatar-image" />
+		<div class="team-section">
+			<div class="slide-content-container">
+				<div class="slide-item team-slide-item">
+					<div class="slide-content-section">
+						<div class="team-section-person-container">
+							<div class="table-container">
+								<div class="table-row">
+									<div class="image-container">
+										<img src="images/wasin-8bit-avatar-circular.png" />
+									</div>
+								</div>
+								<div class="table-row team-section-person-name">
+									Wasin Thonkaew
+								</div>
+								<div class="table-row team-section-person-tagline">
+									一体机生产<br/>代码就像没有明天<br/>
+									<a class="tooltip" onclick="abzico.toggleTooltip('wasin-qrcode-tooltip')">
+										联系他
+										<span class="tooltip-content" id="wasin-qrcode-tooltip"><img src="images/wasin-wechat-qrcode.jpeg" class="qrcode-image" /></span>
+									</a>
+								</div>
+							</div>
 						</div>
-						<div class="team-section-avatar-name en-bold-text white">
-							Wasin Thonkaew
+						<div class="team-section-person-container">
+							<div class="table-container">
+								<div class="table-row">
+									<div class="image-container">
+										<img src="images/xiuyi-8bit-avatar-circular.png" />
+									</div>
+								</div>
+								<div class="table-row team-section-person-name">
+									陈修一
+								</div>
+								<div class="table-row team-section-person-tagline">
+									中心联络点, 支持艺术家<br/>我先洗澡<br/>
+									<a class="tooltip" onclick="abzico.toggleTooltip('xiuyi-qrcode-tooltip')">
+										联系她
+										<span class="tooltip-content" id="xiuyi-qrcode-tooltip"><img src="images/xiyi-wechat-qrcode-cut.png" class="qrcode-image" /></span>
+									</a>
+								</div>
+							</div>
 						</div>
-					</div>
-					<div class="team-section-avatar-tagline sc-regular-text">
-						一体机生产<br/>代码就像没有明天<br/>
-						<a class="tooltip" onclick="abzico.toggleTooltip('wasin-qrcode-tooltip')">
-							联系他
-							<span class="tooltip-content" id="wasin-qrcode-tooltip"><img src="images/wasin-wechat-qrcode.jpeg" class="qrcode-image" /></span>
-						</a>
 					</div>
 				</div>
-				<div class="flex-container team-section-avatar-wrapper">
-					<div class="flex-container team-section-avatar-and-name-wrapper">
-						<div class="team-section-avatar-image-wrapper">
-							<img src="images/xiuyi-8bit-avatar.jpg" class="team-section-avatar-image" />
-						</div>
-						<div class="team-section-avatar-name sc-bold-text white">
-							陈修一
-						</div>
-					</div>
-					<div class="team-section-avatar-tagline sc-regular-text">
-						中心联络点, 支持艺术家<br/>我先洗澡<br/>
-						<a class="tooltip" onclick="abzico.toggleTooltip('xiuyi-qrcode-tooltip')">
-							联系她
-							<span class="tooltip-content" id="xiuyi-qrcode-tooltip"><img src="images/xiyi-wechat-qrcode-cut.png" class="qrcode-image" /></span>
-						</a>
-					</div>
-				</div>
-			</div>
-			<div class="team-section-tagline">
-
 			</div>
 		</div>
 
 		<!-- contactus-section -->
-		<div class="flex-container contactus-section">
-			<div class="section-header black low-padding text-black-shadow sc-bold-text contactus-header-section">
-				我们做小程序
-				<div class="header-text-separator black"></div>
-			</div>
-			<div class="section-content black flex-container contactus-content-section">
-				<div class="contactus-left-section sc-regular-text text-black-shadow flex-container">
-					<div class="contactus-left-section-text-wrapper">
-						<span>深圳市气包子科技合伙企业（有限合伙）</span><br/><br/>
-						<span class="bold">地址</span>: 宝安富通好旺角C3栋1单元7层702<br/>
-						<span class="bold">电话</span>：+86 156 8082 3260
+		<div class="contactus-section">
+			<div class="slide-content-container">
+				<div class="slide-item contactus-slide-item">
+					<div class="slide-header-section">
+						<div>我们做小程序</div>
+						<div class="header-text-separator"></div>
 					</div>
-				</div>
-				<div class="contactus-right-section flex-container">
-					<img src="images/company-qrcode.jpg" />
-					<div class="image-tagline sc-regular-text">
-						扫描公司的公共账户
+					<div class="slide-content-section contactus-slide-content-section">
+						<div class="contactus-section-left-part">
+							<div class="text-container">
+								<p><span class="bold">深圳市气包子科技合伙企业（有限合伙)</span><br/><br>
+								<span class="bold">地址</span>: 宝安富通好旺角C3栋1单元7层702<br/>
+								<span class="bold">电话</span>：+86 156 8082 3260
+								</p>
+							</div>
+						</div>
+						<div class="contactus-section-right-part">
+							<div class="image-container">
+								<img src="images/company-qrcode.jpg" />
+							</div>
+							<div class="image-tagline">扫描公司的公共账户</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -178,32 +203,45 @@
 			</div>
 		</div>
 
-		<!-- followus-section -->
-		<div class="flex-container followus-section">
-			
-			<div class="section-content black flex-container followus-content-section">
-				<div class="followus-content-section-social-wrapper flex-container low-padding">
-					<div class="image-wrapper">
-						<img src="images/github-logo.png" />
-					</div>
-					<div class="link-wrapper">
-						<a class="tagline en-regular-text black" href="https://github.com/abzi_co">abzico</a>
-					</div>
-				</div>
-				<div class="followus-content-section-social-wrapper flex-container low-padding">
-					<div class="image-wrapper">
-						<img src="images/instagram-logo.png" />
-					</div>
-					<div class="link-wrapper">
-						<a class="tagline en-regular-text black" href="https://instagram.com/abzi_co">@abzi_co</a>
-					</div>
-				</div>
-				<div class="followus-content-section-social-wrapper flex-container low-padding">
-					<div class="image-wrapper">
-						<img src="images/twitter-logo.png" />
-					</div>
-					<div class="link-wrapper">
-						<a class="tagline en-regular-text black" href="https://twitter.com/abzi_co">@abzi_co</a>
+		<!-- followus-section (non-flex) -->
+		<div class="followus-section">
+			<div class="slide-content-container">
+				<div class="slide-item followus-slide-item">
+					<div class="slide-content-section followus-content-section">
+						<div class="social-container">
+							<div class="image-container">
+								<img src="images/github-logo.png" />
+							</div>
+							<div class="link-container">
+								<a class="tagline" href="https://github.com/abzico">abzico</a>
+							</div>
+						</div>
+						<div class="social-container">
+							<div class="image-container">
+								<img src="images/wechat-logo.png" />
+							</div>
+							<div class="link-container">
+								<a class="tagline tooltip" onclick="abzico.toggleTooltip('abzico-qrcode-tooltip')">气包子
+									<span class="tooltip-content" id="abzico-qrcode-tooltip"><img src="images/company-qrcode.jpg" class="qrcode-image" /></span>
+								</a>
+							</div>
+						</div>
+						<div class="social-container">
+							<div class="image-container">
+								<img src="images/instagram-logo.png" />
+							</div>
+							<div class="link-container">
+								<a class="tagline" href="https://instagram.com/abzi_co">@abzi_co</a>
+							</div>
+						</div>
+						<div class="social-container">
+							<div class="image-container">
+								<img src="images/twitter-logo.png" />
+							</div>
+							<div class="link-container">
+								<a class="tagline" href="https://twitter.com/abzi_co">@abzi_co</a>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -211,13 +249,9 @@
 
 		<!-- footnote-section -->
 		<div class="footnote-section">
-			<div class="en-regular-text text-black-shadow">
-				&copy; Copyrights - All Rights Reserved 2017
-			</div>
-			<div class="sc-regular-text text-black-shadow">
-				深圳市气包子科技合伙企业（有限合伙）
-			</div>
-			<a class="sc-regular-text text-black-shadow" href="http://www.miitbeian.gov.cn/">
+			<div>&copy; Copyrights - All Rights Reserved 2017</div>
+			<div class="gray">深圳市气包子科技合伙企业（有限合伙）</div>
+			<a href="http://www.miitbeian.gov.cn/">
 				粤ICP备17112999号
 			</a>
 		</div>

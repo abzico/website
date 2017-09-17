@@ -22,7 +22,8 @@ var abzico = {
 	// return item number (not index)
 	showDivs: function(n, length, currentSlideIndex, className, buttonClassName) {
 		var i;
-		var x = document.getElementsByClassName(className);
+		var x = document.querySelectorAll('.' + className);
+
 		if (n > x.length) { currentSlideIndex = 1; }
 		if (n < 1) { currentSlideIndex = x.length; }
 		for (var i = 0; i < x.length; i++) {
@@ -31,15 +32,15 @@ var abzico = {
 		x[currentSlideIndex-1].style.display = "block";
 
 		// reflect css
-		var buttons = document.getElementsByClassName(buttonClassName);
+		var buttons = document.querySelectorAll('.' + buttonClassName);
 		if (buttons.length > 0) {
 			var buttonType = buttons[0].className.search("white") != -1 ? "white" : "black";
 
 			for (var i = 0; i < buttons.length; i++) {
 				if (n == i+1)
-					buttons[i].className = `${buttonClassName} circular-button ${buttonType}-active`;
+					buttons[i].className = buttonClassName + " circular-button " + buttonType + "-active";
 				else
-					buttons[i].className = `${buttonClassName} circular-button ${buttonType}-inactive`;
+					buttons[i].className = buttonClassName + " circular-button " + buttonType + "-inactive";
 			}
 		}
 
