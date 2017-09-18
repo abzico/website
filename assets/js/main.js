@@ -66,21 +66,20 @@ var abzico = {
 	},
 
 	initMap: function(mapElementId) {
-		    var center=new qq.maps.LatLng(22.5588425,113.8809458);
-		    var map=new qq.maps.Map(document.getElementById(mapElementId),{
-		        center:center,
-		        zoom:16
-		    });
-		    //添加定时器
-		    setTimeout(function(){
-		        var marker=new qq.maps.Marker({
-		            position:center,
-					animation:qq.maps.MarkerAnimation.DROP,
-		            map:map
-		        });
-		        //marker.setAnimation(qq.maps.Animation.DROP);
-		    },2000);
-			}
+		//谷歌坐标
+		var x = 113.896353;
+		var y = 22.563782;
+		var ggPoint = new BMap.Point(x,y);
+
+		//地图初始化
+		var bm = new BMap.Map(mapElementId);
+		bm.centerAndZoom(ggPoint, 15);
+		bm.addControl(new BMap.NavigationControl());
+
+		//添加谷歌marker和label
+		var markergg = new BMap.Marker(ggPoint);
+		bm.addOverlay(markergg); //添加谷歌marker
+	}
 };
 
 (function() {
