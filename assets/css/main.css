@@ -250,6 +250,12 @@ body {
 	background-size: cover;
 	overflow: hidden;
 }
+.game-section .link {
+	border-bottom: 2px dotted #9FABFF;
+	padding-bottom: 3px;
+	text-decoration: none;
+	color: #8CABFF;
+}
 
 /* tech-section */
 .tech-section {
@@ -261,6 +267,12 @@ body {
 	background-position: center;
 	background-size: cover;
 	overflow: hidden;
+}
+.tech-section .link {
+	border-bottom: 2px dotted #888888;
+	padding-bottom: 3px;
+	text-decoration: none;
+	color: #555555;
 }
 
 /* contactus-section */
