@@ -269,10 +269,10 @@ body {
 	overflow: hidden;
 }
 .tech-section .link {
-	border-bottom: 2px dotted #888888;
+	border-bottom: 2px dotted #5897fc;
 	padding-bottom: 3px;
 	text-decoration: none;
-	color: #555555;
+	color: #4286f4;
 }
 
 /* contactus-section */

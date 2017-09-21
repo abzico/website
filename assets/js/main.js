@@ -5,22 +5,22 @@ var abzico = {
 	techSlideIndex: 1,
 
 	plusGameSlides: function(n) {
-		this.gameSlideIndex = this.showDivs(this.gameSlideIndex += n, 3, this.gameSlideIndex, "ref-game-slides", "ref-game-slides-nav");
+		this.gameSlideIndex = this.showDivs(this.gameSlideIndex += n, this.gameSlideIndex, "ref-game-slides", "ref-game-slides-nav");
 	},
 
 	showGameSlidesAt: function(i) {
 		this.gameSlideIndex = i;
-		this.gameSlideIndex = this.showDivs(this.gameSlideIndex, 3, this.gameSlideIndex, "ref-game-slides", "ref-game-slides-nav");
+		this.gameSlideIndex = this.showDivs(this.gameSlideIndex, this.gameSlideIndex, "ref-game-slides", "ref-game-slides-nav");
 	},
 
 	showTechSlidesAt: function(i) {
 		this.techSlideIndex = i;
-		this.techSlideIndex = this.showDivs(this.techSlideIndex, 2, this.techSlideIndex, "ref-tech-slides", "ref-tech-slides-nav");
+		this.techSlideIndex = this.showDivs(this.techSlideIndex, this.techSlideIndex, "ref-tech-slides", "ref-tech-slides-nav");
 	},
 
 	// common functions
 	// return item number (not index)
-	showDivs: function(n, length, currentSlideIndex, className, buttonClassName) {
+	showDivs: function(n, currentSlideIndex, className, buttonClassName) {
 		var i;
 		var x = document.querySelectorAll('.' + className);
 
@@ -83,8 +83,8 @@ var abzico = {
 };
 
 (function() {
-	abzico.showDivs(abzico.gameSlideIndex, 3, abzico.gameSlideIndex, "ref-game-slides", "ref-game-slides-nav");
-	abzico.showDivs(abzico.techSlideIndex, 2, abzico.techSlideIndex, "ref-tech-slides", "ref-tech-slides-nav");
+	abzico.showDivs(abzico.gameSlideIndex, abzico.gameSlideIndex, "ref-game-slides", "ref-game-slides-nav");
+	abzico.showDivs(abzico.techSlideIndex, abzico.techSlideIndex, "ref-tech-slides", "ref-tech-slides-nav");
 }());
 
 window.abzico = abzico;
