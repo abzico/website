@@ -5,24 +5,25 @@ var abzico = {
 	techSlideIndex: 1,
 
 	plusGameSlides: function(n) {
-		this.gameSlideIndex = this.showDivs(this.gameSlideIndex += n, 3, this.gameSlideIndex, "ref-game-slides", "ref-game-slides-nav");
+		this.gameSlideIndex = this.showDivs(this.gameSlideIndex += n, this.gameSlideIndex, "ref-game-slides", "ref-game-slides-nav");
 	},
 
 	showGameSlidesAt: function(i) {
 		this.gameSlideIndex = i;
-		this.gameSlideIndex = this.showDivs(this.gameSlideIndex, 3, this.gameSlideIndex, "ref-game-slides", "ref-game-slides-nav");
+		this.gameSlideIndex = this.showDivs(this.gameSlideIndex, this.gameSlideIndex, "ref-game-slides", "ref-game-slides-nav");
 	},
 
 	showTechSlidesAt: function(i) {
 		this.techSlideIndex = i;
-		this.techSlideIndex = this.showDivs(this.techSlideIndex, 2, this.techSlideIndex, "ref-tech-slides", "ref-tech-slides-nav");
+		this.techSlideIndex = this.showDivs(this.techSlideIndex, this.techSlideIndex, "ref-tech-slides", "ref-tech-slides-nav");
 	},
 
 	// common functions
 	// return item number (not index)
-	showDivs: function(n, length, currentSlideIndex, className, buttonClassName) {
+	showDivs: function(n, currentSlideIndex, className, buttonClassName) {
 		var i;
-		var x = document.getElementsByClassName(className);
+		var x = document.querySelectorAll('.' + className);
+
 		if (n > x.length) { currentSlideIndex = 1; }
 		if (n < 1) { currentSlideIndex = x.length; }
 		for (var i = 0; i < x.length; i++) {
@@ -31,15 +32,15 @@ var abzico = {
 		x[currentSlideIndex-1].style.display = "block";
 
 		// reflect css
-		var buttons = document.getElementsByClassName(buttonClassName);
+		var buttons = document.querySelectorAll('.' + buttonClassName);
 		if (buttons.length > 0) {
 			var buttonType = buttons[0].className.search("white") != -1 ? "white" : "black";
 
 			for (var i = 0; i < buttons.length; i++) {
 				if (n == i+1)
-					buttons[i].className = `${buttonClassName} circular-button ${buttonType}-active`;
+					buttons[i].className = buttonClassName + " circular-button " + buttonType + "-active";
 				else
-					buttons[i].className = `${buttonClassName} circular-button ${buttonType}-inactive`;
+					buttons[i].className = buttonClassName + " circular-button " + buttonType + "-inactive";
 			}
 		}
 
@@ -65,26 +66,25 @@ var abzico = {
 	},
 
 	initMap: function(mapElementId) {
-		    var center=new qq.maps.LatLng(22.5588425,113.8809458);
-		    var map=new qq.maps.Map(document.getElementById(mapElementId),{
-		        center:center,
-		        zoom:16
-		    });
-		    //添加定时器
-		    setTimeout(function(){
-		        var marker=new qq.maps.Marker({
-		            position:center,
-					animation:qq.maps.MarkerAnimation.DROP,
-		            map:map
-		        });
-		        //marker.setAnimation(qq.maps.Animation.DROP);
-		    },2000);
-			}
+		//谷歌坐标
+		var x = 113.896353;
+		var y = 22.563782;
+		var ggPoint = new BMap.Point(x,y);
+
+		//地图初始化
+		var bm = new BMap.Map(mapElementId);
+		bm.centerAndZoom(ggPoint, 15);
+		bm.addControl(new BMap.NavigationControl());
+
+		//添加谷歌marker和label
+		var markergg = new BMap.Marker(ggPoint);
+		bm.addOverlay(markergg); //添加谷歌marker
+	}
 };
 
 (function() {
-	abzico.showDivs(abzico.gameSlideIndex, 3, abzico.gameSlideIndex, "ref-game-slides", "ref-game-slides-nav");
-	abzico.showDivs(abzico.techSlideIndex, 2, abzico.techSlideIndex, "ref-tech-slides", "ref-tech-slides-nav");
+	abzico.showDivs(abzico.gameSlideIndex, abzico.gameSlideIndex, "ref-game-slides", "ref-game-slides-nav");
+	abzico.showDivs(abzico.techSlideIndex, abzico.techSlideIndex, "ref-tech-slides", "ref-tech-slides-nav");
 }());
 
 window.abzico = abzico;
