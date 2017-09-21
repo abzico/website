@@ -269,12 +269,6 @@ body {
 	background-size: cover;
 	overflow: hidden;
 }
-.game-section .link {
-	border-bottom: 2px dotted #9FABFF;
-	padding-bottom: 3px;
-	text-decoration: none;
-	color: #8CABFF;
-}
 
 /* tech-section */
 .tech-section {
@@ -287,11 +281,23 @@ body {
 	background-size: cover;
 	overflow: hidden;
 }
-.tech-section .link {
-	border-bottom: 2px dotted #5897fc;
-	padding-bottom: 3px;
+.focus-link {
+	border: 2px solid black;
+	border-radius: 10px;
+	padding: 20px;
 	text-decoration: none;
-	color: #4286f4;
+	color: black;
+	font-size: 20px;
+}
+.focus-link:hover {
+	border: 2px solid #CCC;
+}
+.focus-link.white {
+	border-color: white;
+	color: white;
+}
+.focus-link.white:hover {
+	border-color: #333;
 }
 
 /* contactus-section */
