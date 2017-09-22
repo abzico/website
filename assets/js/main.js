@@ -79,10 +79,43 @@ var abzico = {
 		//添加谷歌marker和label
 		var markergg = new BMap.Marker(ggPoint);
 		bm.addOverlay(markergg); //添加谷歌marker
+	},
+
+	onResize: function() {
+		var w = window.innerWidth
+		|| document.documentElement.clientWidth
+		|| document.body.clientWidth;
+
+		if (w >= 768) {
+			var statementImages = document.querySelectorAll(".statement-image-element");
+			var statementTexts = document.querySelectorAll(".statement-text");
+
+			for (var i=0; i<statementImages.length; i++) {
+				statementImages[i].style.width = "180px";
+			}
+			for (var i=0; i<statementTexts.length; i++) {
+				statementTexts[i].style = "font-size: 20px";
+			}
+		}
+		else {
+			var statementImages = document.querySelectorAll(".statement-image-element");
+			var statementTexts = document.querySelectorAll(".statement-text");
+
+			for (var i=0; i<statementImages.length; i++) {
+				statementImages[i].style.width = "100px";
+			}
+			for (var i=0; i<statementTexts.length; i++) {
+				statementTexts[i].style = "font-size: 14px";
+			}
+		}
 	}
 };
 
 (function() {
+	// adjust css onload, and onresize
+	window.addEventListener("load", abzico.onResize);
+	window.addEventListener("resize", abzico.onResize);
+
 	abzico.showDivs(abzico.gameSlideIndex, abzico.gameSlideIndex, "ref-game-slides", "ref-game-slides-nav");
 	abzico.showDivs(abzico.techSlideIndex, abzico.techSlideIndex, "ref-tech-slides", "ref-tech-slides-nav");
 }());
