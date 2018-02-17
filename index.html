@@ -12,21 +12,19 @@
 		<meta content="https://abzi.co" property="og:url" />
 		<meta content="https://abzi.co/images/company-logo.png" property="og:image" />
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=2kmYTXSquEdv75Ed7Wd5HmtPMg0o3VcX"></script>
 	</head>
-	<body onload="abzico.initMap('map-element')">
+	<body>
 		<!-- top-section (non-flex version) -->
-		<div class="nav">
-			<a class="link-item" href="https://wiki.abzi.co">Wiki</a>
-			<a class="link-item" href="https://wiki.abzi.co/2017/09/21/postmortem-raceplant-ciga-game-jam-2017/">RacePlant</a>
-			<a class="link-item" href="https://wiki.abzi.co/2017/09/22/heatap-first-look/">HeaTap</a>
+		<div id="nav" class="nav">
+			<a class="link-item" href="https://wiki.abzi.co">知识</a>
+			<a class="link-item" href="#" onclick="smoothScroll('products-section');">制品</a>
 		</div>
 		<div class="top-section align-center">
 			<div class="top-section-elements">
 				<div class="top-section-image">
-					<img src="images/company-logo.png" />
+					<img src="images/company-logo.png" class="anim-comeinleft"/>
 				</div>
-				<div class="top-section-text align-center align-middle">
+				<div class="top-section-text align-center align-middle anim-comeinright">
 					<div>气包子</div>
 					<div class="top-section-hr"></div>
 					<div>Angry Baozi</div>
@@ -67,254 +65,160 @@
 				</table>
 			</div>
 		</div>
-		
-		<!-- game-section (non-flex version) -->
-		<div class="game-section slides-container" id="gameSection">
-			<div class="slide-content-container scrollable-y">
-				<div class="slide-item ref-game-slides">
-					<div class="slide-header-section">
-						<div>我们制作独立游戏</div>
-						<div class="header-text-separator"></div>
-					</div>
-					<div class="slide-content-section">
-						<div class="slide-image-container">
-							<div>
-								<img src="images/raceplant-screenshot.png" class="slide-single-image" onclick="window.location.href='images/raceplant-screenshot.png'"/>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="slide-item ref-game-slides">
-					<div class="slide-header-dummy-section"></div>
-					<div class="slide-content-section">
-						<div class="slide-image-container occupy-full">
-							<img src="images/game-gifs/1.gif" class="slide-image" onclick="window.location.href='images/game-gifs/1.gif'"/>
-							<img src="images/game-gifs/4.gif" class="slide-image" onclick="window.location.href='images/game-gifs/4.gif'"/>
-						</div>
-					</div>
-				</div>
-				<div class="slide-item ref-game-slides">
-					<div class="slide-header-dummy-section"></div>
-					<div class="slide-content-section">
-						<div class="slide-image-container">
-							<div>
-								<img src="images/public-play.jpg" class="slide-single-image" onclick="window.location.href='images/public-play.jpg'"/>
-							</div>
-						</div>
-						<div class="clear-image-float"></div>
-						<div>
-							<p>公众娱乐日</p>
-						</div>
-					</div>
-				</div>
-				<div class="slide-item ref-game-slides">
-					<div class="slide-content-section">
-						<div class="text-full-content">
-							<p><span class="bold">Raceplant</span> 是我们开发的一款游戏<br/>
-							是在48小时 <span class="bold">CIGA Game Jam 2017</span> 中制作的。<br/>
-							制作内部游戏是我们的操作之一。<br/><br/><br/>
-							<a href="https://wiki.abzi.co/2017/09/21/postmortem-raceplant-ciga-game-jam-2017/" class="focus-link white">更多信息</a>
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="clear-image-float"></div>
-			<div class="slide-navigator-container">
-				<a onclick="window.abzico.showGameSlidesAt(1)" class="ref-game-slides-nav circular-button white-active"></a>
-				<a onclick="window.abzico.showGameSlidesAt(2)" class="ref-game-slides-nav circular-button 
-				white-inactive"></a>
-				<a onclick="window.abzico.showGameSlidesAt(3)" class="ref-game-slides-nav circular-button white-inactive"></a>
-				<a onclick="window.abzico.showGameSlidesAt(4)" class="ref-game-slides-nav circular-button white-inactive"></a>
-			</div>
-		</div>
-
-		<!-- tech-section (non-flex) -->
-		<div class="tech-section slides-container" id="techSection">
-			<div class="slide-content-container scrollable-y">
-				<div class="slide-item ref-tech-slides">
-					<div class="slide-header-section">
-						<div>我们做小程序和互联网服务</div>
-						<div class="header-text-separator"></div>
-					</div>
-					<div class="slide-content-section">
-						<div class="slide-image-container">
-							<div>
-								<img src="images/heatap-screenshot.png" class="slide-single-image" onclick="window.location.href='images/heatap-screenshot.png'"/>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="slide-item ref-tech-slides">
-					<div class="slide-header-dummy-section"></div>
-					<div class="slide-content-section">
-						<div class="slide-image-container occupy-full">
-							<img src="images/tech-gifs/2.gif" class="slide-image" onclick="window.location.href='images/tech-gifs/2.gif'"/>
-							<img src="images/tech-gifs/4.gif" class="slide-image" onclick="window.location.href='images/tech-gifs/4.gif'"/>
-						</div>
-					</div>
-				</div>
-				<div class="slide-item ref-tech-slides">
-					<div class="slide-content-section">
-						<div class="text-full-content">
-							<p><span class="bold">HeaTap</span> 是针对有趣的地区和地点<br/>
-							正在开发的人群来源地理位置<br/>
-							更精彩的应用程序...<br/><br/><br/>
-							<a href="https://wiki.abzi.co/2017/09/22/heatap-first-look/" class="focus-link">更多信息</a>
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="clear-image-float"></div>
-			<div class="slide-navigator-container">
-				<a onclick="window.abzico.showTechSlidesAt(1)" class="ref-tech-slides-nav circular-button black-active"></a>
-				<a onclick="window.abzico.showTechSlidesAt(2)" class="ref-tech-slides-nav 
-				circular-button black-inactive"></a>
-				<a onclick="window.abzico.showTechSlidesAt(3)" class="ref-tech-slides-nav circular-button black-inactive"></a>
-			</div>
-		</div>
+    
+    <!-- showcase of products -->
+    <div id="products-section">
+      <div class="row">
+        <div class="slot-section col-4 col-m-6 overlay" style="background-image: url('https://wiki.abzi.co/img/products/heatap/screenshot.jpg');" onclick="delayGotoProductURL('https://wiki.abzi.co/heatap/');">
+          <div class="project-meta">
+            <h1>HeaTap</h1>
+            <label>HeaTap, crowd-source location-based for interesting places and area in China.</label>
+          </div>
+        </div>
+        <div class="slot-section col-4 col-m-6 overlay" style="background-image: url('https://wiki.abzi.co/img/products/protik/Marquee.png');" onclick="delayGotoProductURL('https://wiki.abzi.co/protik/');">
+          <div class="project-meta">
+              <h1>Protik</h1>
+              <label>Minimalist Chrome Extension to Protect Your Flow from Tweets</label>
+            </div>
+        </div>
+        <div class="slot-section col-4 col-m-6 overlay" style="background-image: url('https://wiki.abzi.co/img/products/urltoqrcode/promo.png');" onclick="delayGotoProductURL('https://wiki.abzi.co/urltoqrcode/');">
+          <div class="project-meta">
+              <h1>URLToQRCode</h1>
+              <label>A simple Chrome Extension to convert current browser tab's URL to QRCode</label>
+            </div>
+        </div>
+        <div class="row">
+          <div class="slot-section col-4 col-m-6 overlay" style="background-image: url('https://wiki.abzi.co/img/products/raceplant/raceplant-screenshot.png');" onclick="delayGotoProductURL('https://wiki.abzi.co/raceplant/');">
+            <div class="project-meta">
+              <h1>RacePlant</h1>
+              <label>Multiplayer hot-seat game of planting tree, and collecting its fruits for score.</label>
+            </div>
+          </div>
+          <div class="slot-section col-4 col-m-6 overlay" style="background-image: url('https://wiki.abzi.co/img/products/angie/feature-graphic.png');" onclick="delayGotoProductURL('https://wiki.abzi.co/angie/');">
+            <div class="project-meta">
+                <h1>Angie</h1>
+                <label>Live wallpaper with more than 45k GLSL special effects from glslsandbox.com</label>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
 		<!-- team-section -->
 		<div class="team-section">
-			<div class="slide-content-container">
-				<div class="slide-item team-slide-item">
-					<div class="slide-content-section">
-						<div class="team-section-person-container">
-							<div class="table-container">
-								<div class="table-row">
-									<div class="image-container">
-										<img src="images/wasin-8bit-avatar-circular.png" />
-									</div>
-								</div>
-								<div class="table-row team-section-person-name">
-									Wasin Thonkaew
-								</div>
-								<div class="table-row team-section-person-tagline">
-									一体机生产<br/>代码就像没有明天<br/>
-									<a class="tooltip" onclick="abzico.toggleTooltip('wasin-qrcode-tooltip')">
-										联系他
-										<span class="tooltip-content" id="wasin-qrcode-tooltip"><img src="images/wasin-wechat-qrcode.jpeg" class="qrcode-image" /></span>
-									</a>
-								</div>
-							</div>
-						</div>
-						<div class="team-section-person-container">
-							<div class="table-container">
-								<div class="table-row">
-									<div class="image-container">
-										<img src="images/xiuyi-8bit-avatar-circular.png" />
-									</div>
-								</div>
-								<div class="table-row team-section-person-name">
-									陈修一
-								</div>
-								<div class="table-row team-section-person-tagline">
-									中心联络点, 支持艺术家<br/>我先洗澡<br/>
-									<a class="tooltip" onclick="abzico.toggleTooltip('xiuyi-qrcode-tooltip')">
-										联系她
-										<span class="tooltip-content" id="xiuyi-qrcode-tooltip"><img src="images/xiyi-wechat-qrcode-cut.png" class="qrcode-image" /></span>
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<!-- contactus-section -->
-		<div class="contactus-section">
-			<div class="slide-content-container">
-				<div class="slide-item contactus-slide-item">
-					<div class="slide-header-section">
-						<div>我们做小程序</div>
-						<div class="header-text-separator"></div>
-					</div>
-					<div class="slide-content-section contactus-slide-content-section">
-						<div class="contactus-section-left-part">
-							<div class="text-container">
-								<p><span class="bold">深圳市气包子科技合伙企业（有限合伙)</span><br/><br>
-								<span class="bold">地址</span>: 宝安富通好旺角C3栋1单元7层702<br/>
-								<span class="bold">电话</span>：+86 156 8082 3260
-								</p>
-							</div>
-						</div>
-						<div class="contactus-section-right-part">
-							<div class="image-container">
-								<img src="images/company-qrcode.jpg" />
-							</div>
-							<div class="image-tagline">扫描公司的公共账户</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<!-- map-section -->
-		<div class="map-section">
-			<div id="map-element">                          
-			</div>
+      <div class="team-slide-item">
+        <div class="team-section-person-container">
+          <div class="table-container">
+            <div class="table-row">
+              <div class="image-container">
+                <img src="images/wasin-8bit-avatar-circular.png" />
+              </div>
+            </div>
+            <div class="table-row team-section-person-name">
+              Wasin Thonkaew
+            </div>
+            <div class="table-row team-section-person-tagline">
+              一体机生产<br/>代码就像没有明天<br/>
+              <a class="tooltip" onclick="abzico.toggleTooltip('wasin-qrcode-tooltip')">
+                联系他
+                <span class="tooltip-content" id="wasin-qrcode-tooltip"><img src="images/wasin-wechat-qrcode.jpeg" class="qrcode-image" /></span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="team-section-person-container">
+          <div class="table-container">
+            <div class="table-row">
+              <div class="image-container">
+                <img src="images/xiuyi-8bit-avatar-circular.png" />
+              </div>
+            </div>
+            <div class="table-row team-section-person-name">
+              陈修一
+            </div>
+            <div class="table-row team-section-person-tagline">
+              中心联络点, 支持艺术家<br/>我先洗澡<br/>
+              <a class="tooltip" onclick="abzico.toggleTooltip('xiuyi-qrcode-tooltip')">
+                联系她
+                <span class="tooltip-content" id="xiuyi-qrcode-tooltip"><img src="images/xiyi-wechat-qrcode-cut.png" class="qrcode-image" /></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
 		</div>
 
 		<!-- followus-section (non-flex) -->
 		<div class="followus-section">
-			<div class="slide-content-container">
-				<div class="slide-item followus-slide-item">
-					<div class="slide-content-section followus-content-section">
-						<div class="social-container">
-							<div class="image-container">
-								<img src="images/github-logo.png" />
-							</div>
-							<div class="link-container">
-								<a class="tagline" href="https://github.com/abzico">abzico</a>
-							</div>
-						</div>
-						<div class="social-container">
-							<div class="image-container">
-								<img src="images/wechat-logo.png" />
-							</div>
-							<div class="link-container">
-								<a class="tagline" href="images/company-qrcode.jpg">气包子
-								</a>
-							</div>
-						</div>
-						<div class="social-container">
-							<div class="image-container">
-								<img src="images/instagram-logo.png" />
-							</div>
-							<div class="link-container">
-								<a class="tagline" href="https://instagram.com/abzi_co">@abzi_co</a>
-							</div>
-						</div>
-						<div class="social-container">
-							<div class="image-container">
-								<img src="images/twitter-logo.png" />
-							</div>
-							<div class="link-container">
-								<a class="tagline" href="https://twitter.com/abzi_co">@abzi_co</a>
-							</div>
-						</div>
-						<div class="social-container">
-							<div class="image-container">
-								<img src="images/email-icon.png" />
-							</div>
-							<div class="link-container">
-								<a class="tagline" href="mailto:contact@abzi.co">Email</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+      <div class="followus-content-section">
+        <div class="row">
+          <div class="social-container">
+            <div class="image-container">
+              <img src="images/github-logo.png" />
+            </div>
+            <div class="link-container">
+              <a class="tagline" href="https://github.com/abzico">abzico</a>
+            </div>
+          </div>
+          <div class="social-container">
+            <div class="image-container">
+              <img src="images/wechat-logo.png" />
+            </div>
+            <div class="link-container">
+              <a class="tagline" href="images/company-qrcode.jpg">气包子
+              </a>
+            </div>
+          </div>
+          <div class="social-container">
+            <div class="image-container">
+              <img src="images/instagram-logo.png" />
+            </div>
+            <div class="link-container">
+              <a class="tagline" href="https://instagram.com/abzi_co">@abzi_co</a>
+            </div>
+          </div>
+          <div class="social-container">
+            <div class="image-container">
+              <img src="images/twitter-logo.png" />
+            </div>
+            <div class="link-container">
+              <a class="tagline" href="https://twitter.com/abzi_co">@abzi_co</a>
+            </div>
+          </div>
+          <div class="social-container">
+            <div class="image-container">
+              <img src="images/email-icon.png" />
+            </div>
+            <div class="link-container">
+              <a class="tagline" href="mailto:contact@abzi.co">Email</a>
+            </div>
+          </div>
+        </div>
+      </div>
 		</div>
 
 		<!-- footnote-section -->
 		<div class="footnote-section">
-			<div>&copy; Copyrights - All Rights Reserved 2017</div>
-			<div class="gray">深圳市气包子科技合伙企业（有限合伙）</div>
-			<a href="http://www.miitbeian.gov.cn/">
-				粤ICP备17112999号
-			</a>
+      <div class="row">
+        <div class="col-6 col-m-6 left-section">
+          <div class="row">
+            <div class="col-6 col-m-6 public-account-qrcode">
+              <img src="images/company-qrcode.jpg"/>
+            </div>
+            <div class="col-6 col-m-6 public-account-text">
+              <span class="gray">地址</span> 宝安富通好旺角C3栋1单元7层702<br>
+              <span class="gray">电话</span> +86 156 8082 3260
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-m-6">
+          <div>&copy; Copyrights - All Rights Reserved 2017-2018</div>
+          <div class="gray">深圳市气包子科技合伙企业（有限合伙）</div>
+          <a href="http://www.miitbeian.gov.cn/" class="miit-link">
+            粤ICP备17112999号
+          </a>
+        </div>
+      </div>
 		</div>
 
 		<!-- load js after page load -->

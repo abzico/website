@@ -1,53 +1,5 @@
 var abzico = {
 
-	// manage variables of website
-	gameSlideIndex: 1,
-	techSlideIndex: 1,
-
-	plusGameSlides: function(n) {
-		this.gameSlideIndex = this.showDivs(this.gameSlideIndex += n, this.gameSlideIndex, "ref-game-slides", "ref-game-slides-nav");
-	},
-
-	showGameSlidesAt: function(i) {
-		this.gameSlideIndex = i;
-		this.gameSlideIndex = this.showDivs(this.gameSlideIndex, this.gameSlideIndex, "ref-game-slides", "ref-game-slides-nav");
-	},
-
-	showTechSlidesAt: function(i) {
-		this.techSlideIndex = i;
-		this.techSlideIndex = this.showDivs(this.techSlideIndex, this.techSlideIndex, "ref-tech-slides", "ref-tech-slides-nav");
-	},
-
-	// common functions
-	// return item number (not index)
-	showDivs: function(n, currentSlideIndex, className, buttonClassName) {
-		var i;
-		var x = document.querySelectorAll('.' + className);
-
-		if (n > x.length) { currentSlideIndex = 1; }
-		if (n < 1) { currentSlideIndex = x.length; }
-		for (var i = 0; i < x.length; i++) {
-			x[i].style.display = "none";
-		}
-		x[currentSlideIndex-1].style.display = "block";
-
-		// reflect css
-		var buttons = document.querySelectorAll('.' + buttonClassName);
-		if (buttons.length > 0) {
-			var buttonType = buttons[0].className.search("white") != -1 ? "white" : "black";
-
-			for (var i = 0; i < buttons.length; i++) {
-				if (n == i+1)
-					buttons[i].className = buttonClassName + " circular-button " + buttonType + "-active";
-				else
-					buttons[i].className = buttonClassName + " circular-button " + buttonType + "-inactive";
-			}
-		}
-
-		// this is item's number not index
-		return currentSlideIndex;
-	},
-
 	toggleTooltip: function(elementId) {
 		// get its immediate child
   	var element = document.getElementById(elementId);
@@ -63,22 +15,6 @@ var abzico = {
     		element.style.display = "none";
     	}
   	}
-	},
-
-	initMap: function(mapElementId) {
-		//谷歌坐标
-		var x = 113.896353;
-		var y = 22.563782;
-		var ggPoint = new BMap.Point(x,y);
-
-		//地图初始化
-		var bm = new BMap.Map(mapElementId);
-		bm.centerAndZoom(ggPoint, 15);
-		bm.addControl(new BMap.NavigationControl());
-
-		//添加谷歌marker和label
-		var markergg = new BMap.Marker(ggPoint);
-		bm.addOverlay(markergg); //添加谷歌marker
 	},
 
 	onResize: function() {
@@ -115,9 +51,60 @@ var abzico = {
 	// adjust css onload, and onresize
 	window.addEventListener("load", abzico.onResize);
 	window.addEventListener("resize", abzico.onResize);
-
-	abzico.showDivs(abzico.gameSlideIndex, abzico.gameSlideIndex, "ref-game-slides", "ref-game-slides-nav");
-	abzico.showDivs(abzico.techSlideIndex, abzico.techSlideIndex, "ref-tech-slides", "ref-tech-slides-nav");
 }());
+
+function delayGotoProductURL(url) {
+  setTimeout(function() {
+    window.location = url;
+  }, 500);
+}
+
+// don't want to use jQuery, so grabbed solution from https://stackoverflow.com/a/10063405/571227. With thanks.
+function currentYPosition() {
+  // Firefox, Chrome, Opera, Safari
+  if (self.pageYOffset) return self.pageYOffset;
+  // Internet Explorer 6 - standards mode
+  if (document.documentElement && document.documentElement.scrollTop)
+      return document.documentElement.scrollTop;
+  // Internet Explorer 6, 7 and 8
+  if (document.body.scrollTop) return document.body.scrollTop;
+  return 0;
+}
+
+
+function elmYPosition(eID) {
+  var elm = document.getElementById(eID);
+  var y = elm.offsetTop;
+  var node = elm;
+  while (node.offsetParent && node.offsetParent != document.body) {
+      node = node.offsetParent;
+      y += node.offsetTop;
+  } return y;
+}
+
+
+function smoothScroll(eID) {
+  var startY = currentYPosition();
+  var stopY = elmYPosition(eID) - document.getElementById("nav").offsetHeight;
+  var distance = stopY > startY ? stopY - startY : startY - stopY;
+  if (distance < 100) {
+      scrollTo(0, stopY); return;
+  }
+  var speed = Math.round(distance / 100);
+  if (speed >= 20) speed = 20;
+  var step = Math.round(distance / 25);
+  var leapY = stopY > startY ? startY + step : startY - step;
+  var timer = 0;
+  if (stopY > startY) {
+      for ( var i=startY; i<stopY; i+=step ) {
+          setTimeout("window.scrollTo(0, "+leapY+")", timer * speed);
+          leapY += step; if (leapY > stopY) leapY = stopY; timer++;
+      } return;
+  }
+  for ( var i=startY; i>stopY; i-=step ) {
+      setTimeout("window.scrollTo(0, "+leapY+")", timer * speed);
+      leapY -= step; if (leapY < stopY) leapY = stopY; timer++;
+  }
+}
 
 window.abzico = abzico;
