@@ -3,6 +3,15 @@
 	padding: 0;
 }
 
+@font-face {
+  font-family: Eightbitwonder;
+  src: local("../fonts/8bitwonder.ttf"), url("../fonts/8bitwonder.ttf");
+}
+@font-face {
+  font-family: "Droid Sans Regular";
+  src: local("../fonts/DroidSans-Regular.ttf"), url("../fonts/DroidSans-Regular.ttf");
+}
+
 body {
 	font-family: Helvetica, "Droid Sans Regular", STXihei, "华文细黑", "Microsoft Yahei","微软雅黑", Tahoma, Arial, sans-serif;	
 }
@@ -96,6 +105,7 @@ body {
 
 /* nav */
 .nav {
+  font-family: Eightbitwonder;
 	background-color: black;
 	padding: 15px 0 15px;
 	text-align: center;
@@ -122,6 +132,7 @@ body {
 
 /* top section */
 .top-section {
+  font-family: Eightbitwonder;
 	color: black;
 	background-color: white;
 	max-width: none;
@@ -191,12 +202,37 @@ body {
 	background-color: black;
 	color: white;
 	text-align: center;
-	background-image: url('../../images/ciga-on-stage.jpg');
+	background-image: url('../../images/abzico-website-banner-barebone.png');
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
 	overflow: hidden;
-	box-shadow: inset 2000px 0 0 0 rgba(0, 0, 0, 0.5);
+	box-shadow: inset 6000px 0 0 0 rgba(0, 0, 0, 0.5);
+  min-height: 570px;
+  position: relative;
+}
+.text-lowerright {
+  font-family: Eightbitwonder;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  text-align: right;
+  line-height: 1.3em;
+}
+.text-lowerright a {
+  text-decoration: none;
+}
+.text-lowerright a:link {
+  color: gray;
+}
+.text-lowerright a:visited  {
+  color: gray;
+}
+.text-lowerright a:active {
+  color: gray;
+}
+.text-lowerright a:hover {
+  color: #cccccc;
 }
 .statement-image > img {
 	width: 180px;
