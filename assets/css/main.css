@@ -219,20 +219,30 @@ body {
   line-height: 1.3em;
   text-shadow: 4px 4px #000000;
 }
-.text-lowerright a {
+.text-lowerleft {
+  font-family: Eightbitwonder;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  text-align: left;
+  line-height: 1.3em;
+  color: #AAAAAA;
+  text-shadow: 4px 4px #000000;
+}
+.text-lowerright a, .text-lowerleft a {
   text-decoration: none;
   text-shadow: 4px 4px #000000;
 }
-.text-lowerright a:link {
+.text-lowerright a:link, .text-lowerleft a:link {
   color: red;
 }
-.text-lowerright a:visited  {
+.text-lowerright a:visited, .text-lowerleft a:visited  {
   color: red;
 }
-.text-lowerright a:active {
+.text-lowerright a:active, .text-lowerleft a:active {
   color: red;
 }
-.text-lowerright a:hover {
+.text-lowerright a:hover, .text-lowerleft a:hover {
   color: #cc0000;
 }
 .statement-image > img {
